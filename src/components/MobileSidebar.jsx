@@ -1,8 +1,10 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 import { assets } from "../assets/frontend_assets/assets"
 import { menu } from "../utlis/utlis"
 
 export default function MobileSidebar({ visible, setVisiable }) {
+    const { pathname } = useLocation();
+    console.log(pathname);
     return (
         <div className={`h-1/2 absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
             <div className="flex flex-col text-gray-600">
@@ -12,7 +14,7 @@ export default function MobileSidebar({ visible, setVisiable }) {
                 </div>
                 {
                     menu.map((item) => (
-                        <NavLink onClick={() => setVisiable(false)} key={item.name} to={item.path} className='py-2 text-center border hover:bg-slate-50'>
+                        <NavLink onClick={() => setVisiable(false)} key={item.name} to={item.path} className={`py-2 text-center border hover:bg-slate-50 ${pathname === item.path ? 'bg-slate-100' : ''}`}>
                             {item.name}
                         </NavLink>
                     ))
