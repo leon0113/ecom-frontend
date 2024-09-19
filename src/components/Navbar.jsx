@@ -13,7 +13,9 @@ function Navbar() {
     return (
         <div className="flex items-center justify-between py-5 font-medium">
             {/* Logo section  */}
-            <img src={assets.logo} alt="logo" className="w-36" />
+            <NavLink to='/' className='cursor-pointer'>
+                <img src={assets.logo} alt="logo" className="w-36" />
+            </NavLink>
             {/* Menu section  */}
             <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
                 {
