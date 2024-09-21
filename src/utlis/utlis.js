@@ -30,4 +30,17 @@ export const profileMenu = [
 
         name: 'Logout'
     },
+];
+
+
+export const categoriesFilter = [
+    { name: 'Men', value: 'Men' },
+    { name: 'Women', value: 'Women' },
+    { name: 'Kids', value: 'Kids' },
+];
+
+export const typesFilter = [
+    { name: 'Topwear', value: 'Topwear' },
+    { name: 'Bottomwear', value: 'Bottomwear' },
+    { name: 'Winterwear', value: 'Winterwear' }
 ]

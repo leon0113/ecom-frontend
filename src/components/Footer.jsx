@@ -33,11 +33,22 @@ const getInTouch = [
         name: 'Github',
         path: 'https://github.com/leon0113'
     },
-]
+];
+
+const ItemList = ({ items }) => (
+    <ul className="flex flex-col gap-1 text-gray-700">
+        {items.map(({ name, path }) => (
+            <Link to={path} key={name} className="hover:text-gray-500">
+                {name}
+            </Link>
+        ))}
+    </ul>
+);
+
 
 export default function Footer() {
     return (
-        <div className="">
+        <footer>
             <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
 
                 <div>
@@ -48,32 +59,22 @@ export default function Footer() {
 
                 <div>
                     <h3 className="text-xl font-medium mb-5">COMPANY</h3>
-                    <ul className="flex flex-col gap-1 text-gray-700">
-                        {
-                            company.map((item) => (
-                                <Link to={item.path} key={item.name} className="hover:text-gray-500">
-                                    {item.name}
-                                </Link>
-                            ))
-                        }
-                    </ul>
+                    <ItemList items={company} />
                 </div>
+
                 <div>
                     <h3 className="text-xl font-medium mb-5">GET IN TOUCH</h3>
-                    <ul className="flex flex-col gap-1 text-gray-700">
-                        {
-                            getInTouch.map((item) => (
-                                <Link to={item.path} key={item.name} className="hover:text-gray-500">
-                                    {item.name}
-                                </Link>
-                            ))
-                        }
-                    </ul>
+                    <ItemList items={getInTouch} />
                 </div>
+
 
 
 
             </div>
-        </div>
+            <div>
+                <hr />
+                <p className="py-5 text-sm text-center text-gray-500">Copyright 2024@ leon0113 - All Right Reserved.</p>
+            </div>
+        </footer>
     )
 }
