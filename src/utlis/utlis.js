@@ -43,4 +43,40 @@ export const typesFilter = [
     { name: 'Topwear', value: 'Topwear' },
     { name: 'Bottomwear', value: 'Bottomwear' },
     { name: 'Winterwear', value: 'Winterwear' }
-]
+];
+
+
+
+export const company = [
+    {
+        name: 'Home',
+        path: '/'
+    },
+    {
+        name: 'About Us',
+        path: '/'
+    },
+    {
+        name: 'Delivery',
+        path: '/'
+    },
+    {
+        name: 'Customer Policy',
+        path: '/'
+    },
+];
+
+export const getInTouch = [
+    {
+        name: '+8801968680113',
+        path: '/'
+    },
+    {
+        name: 'connect.tahjib@gmail.com',
+        path: '/'
+    },
+    {
+        name: 'Github',
+        path: 'https://github.com/leon0113'
+    },
+];
